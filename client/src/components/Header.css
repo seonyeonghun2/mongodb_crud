@@ -1,0 +1,23 @@
+.d-flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-end {
+  justify-content: flex-end;
+}
+.gap-1 {
+  gap: 1rem;
+}
+
+.border-bottom {
+  border-bottom: 1px solid rgb(226, 226, 226);
+  margin: 0.5rem 0;
+}

@@ -1,0 +1,6 @@
+# except file format
+.env
+.env.dev
+.env.dev.local
+
+*/node_modules
