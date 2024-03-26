@@ -15,30 +15,11 @@ const SignUp = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("회원가입을 시도했습니다.");
-    axios({
-      method: "POST",
-      url: "http://localhost:4000/signup",
-      data: {
-        name: name,
-        email: mail,
-        password: passwd,
-      },
-      headers: "application/json; charset=utf-8",
-    })
-      .then((response) => {
-        if (response.status == 200 || response.statusText == "OK") {
-          let choice = confirm("홈 화면으로 이동하시겠습니까?");
-          choice ? (location.href = "/") : null;
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    axios.post("http://localhost:4000/signup", { name, mail, passwd });
   };
   return (
     <form autoComplete="off" onSubmit={handleSubmit}>
-      <h2>Sign Up - 회원 가입</h2>
+      <h2>Sign In - 회원 로그인</h2>
       <div>
         <label htmlFor="uname">이름</label>
         <input
@@ -72,7 +53,7 @@ const SignUp = () => {
           onChange={handleChangePasswd}
         />
       </div>
-      <button type="submit">회원가입</button>
+      <button type="submit">로그인</button>
       <button type="reset">취소</button>
     </form>
   );
