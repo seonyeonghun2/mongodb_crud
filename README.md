@@ -6,5 +6,6 @@
 - React.js v18
 
 ## Back-End Parts
-- MongoDB Cloud
+- MongoDB Cloud vs Local
+- Mongoose (ODM)
 - Node.js
